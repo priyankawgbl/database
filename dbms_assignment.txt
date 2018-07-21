@@ -1,0 +1,145 @@
+tables
+
+user
+  id        integer
+  name      string
+  address   string
+  phone     string
+  email     string
+  status    boolean
+  username  string
+  password  string
+
+
+
+role
+  id
+  user_id
+  role
+
+
+salary
+  id
+  user_id
+  user_salary
+  salary_period
+
+
+
+course
+  id              int
+  course_name     string
+  course_fee      integer
+
+
+
+student_course
+  id            int
+  user_id       int
+  course_id     int
+
+
+subject
+  id              int
+  subject_name    string
+  course_id       int
+
+
+course_subject
+  id            int
+  subject_id    int
+  course_id     int
+
+
+
+batch
+  id        int
+  timing    string
+  batch_name    string
+  duration        string
+  course_id
+
+
+
+
+teacher_subject
+  id            int
+  user_id     int
+  subject_id     int
+
+
+
+lecture
+  id            int
+  batch_id      int
+  user_id       int
+  subject_id    int
+  lecture_date
+
+
+
+student_lecture
+  id
+  lecture_id
+  student_id
+
+
+
+
+
+fee_paid
+  id           int
+  user_id   int
+  paid_date    date
+  course_id    int
+  amount_paid   int
+
+
+
+payment
+  id            int
+  user_id    int
+  payment_date  date
+  for_month     string
+  for_year
+
+
+attendance
+  id            int
+  date          date
+  lecture_id
+
+
+
+user_attendance
+  id
+  attendance_id
+  user_id
+  staus         boolean
+
+
+
+exam
+  id          int
+  exam_date   date
+  exam_time   string
+  subject_id      int
+  total_marks     int
+  exam_type
+
+
+
+
+student_exam
+  id              int
+  exam_id         int
+  user_id      int
+  marks_obtained  int
+
+
+
+event
+  id            int
+  event_name    string
+  date          date
+  holiday_status    boolean
